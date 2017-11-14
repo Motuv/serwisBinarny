@@ -235,24 +235,26 @@ function fpToDec(fp) {
 }
 
 function decToFP(number){
+		number = parseFloat(number);
 		units = parseInt(number);
-		units = decToBin(units);
-		tablicaBin = [];
+		afterpoint ="";
 
-		rest = parseFloat(number) - units;
-		for(var i=0; i<10 || rest==0; i++){
+		rest = number - units;
+		units = decToBin(units);
+		for(var i=0; i<8 && rest!=0; i++){
 			rest*=2;
-			alert(rest);
-			if(rest>1){
-				tablicaBin.shift(1);
+			if(rest>=1){
+				afterpoint += "1";
 				rest-=1;
 			}
 			else{
-				tablicaBin.shift(0);
+				afterpoint += "0";
 			}
 		}
-		return units + "," + tablicaBin.join("");
+		return units + "," + afterpoint;
 }
+
+//testy
 
 var liczba = prompt();
 alert(decToFP(liczba));
