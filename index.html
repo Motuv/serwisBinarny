@@ -5,8 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="script.js"></script>
+  <style>
+	h1 {
+	font-size: 4vw;
+	text-align: center
+	}
+  
+	p {
+	font-size: 2vw
+	}
+	
+	.content {
+	display: none
+	}
+	
+	#tableofcontents {
+	display: none
+	}
+	
+	:target {
+	display: block
+	}
+  </style>
 </head>
 <body>
+<div id="tableofcontents">
+<h1>Zamiana systemów liczbowych</h1>
+  <hr />
+  <a href="#decToBin">Konwersja dziesiętny na binarny</a>
+</div>
 
+<div id="decToBin" class="content">
+  <h1>Zamiana liczby z systemu dziesiętnego na binarny</h1>
+  <hr />
+  <p>
+  Aby zamienić liczbę w systemie dziesiętnym na liczbę w systemie binarnym należy dzielić tą liczbę przez 2 i zapisywać resztę z jej dzielenia, dopóki liczba nie będzie równa 0. Reszty z dzielenia spisane od tyłu dają wynik.
+  </p>
+  <video preload="metadata" controls>
+  Krótki filmik pokazujący zamianę liczby w systemie dziesiętnym na liczbę w systemie binarnym
+  <source src="decToBin.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+location.href = "#tableofcontents";
+</script>
 </body>
 </html>
