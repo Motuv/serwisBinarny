@@ -1,0 +1,59 @@
+body{
+  background-color: #548677;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#baner{
+  margin: 2.5%;
+  width: 90%;
+  height: 20%;
+  border-radius: 10px;
+  background-color: #799F94;
+  padding: 2.5%;
+  font-weight: 700;
+  font-size: 125%;
+}
+
+#menu{
+  float:left;
+  width: 15%;
+  margin: 2.5%;
+  background-color: #799F94;
+  border-radius: 10px;
+  padding: 2.5%;
+  padding-left: 0%;
+  font-size: 125%;
+}
+
+#content{
+  float: left;
+  margin: 2.5%;
+  background-color: #799F94;
+  border-radius: 10px;
+  width: 62.5%;
+  padding: 2.5%;
+}
+
+#stopka{
+  clear: both;
+  margin: 2.5%;
+  width: 90%;
+  height: 20%;
+  border-radius: 10px;
+  background-color: #799F94;
+  padding: 2.5%;
+  font-weight: 700;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+span{
+  font-weight: 700;
+}

@@ -5,56 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="script.js"></script>
-  <style>
-	h1 {
-	font-size: 4vw;
-	text-align: center
-	}
-  
-	p {
-	font-size: 2vw
-	}
-	
-	.content {
-	display: none
-	}
-	
-	#tableofcontents {
-	
-	}
-	
-	:target {
-	display: block;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background: orange
-	}
-  </style>
+  <link rel="Stylesheet" type="text/css" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
 </head>
 <body>
-<div id="tableofcontents">
-<h1>Zamiana systemów liczbowych</h1>
-  <hr />
-  <a href="#decToBin">Konwersja dziesiętny na binarny</a>
-</div>
-
-<div id="decToBin" class="content">
-  <h1>Zamiana liczby z systemu dziesiętnego na binarny</h1>
-  <span><a href="#"> Wróć</a></span>
-  <hr />
-  <p>
-  Aby zamienić liczbę w systemie dziesiętnym na liczbę w systemie binarnym należy dzielić tą liczbę przez 2 i zapisywać resztę z jej dzielenia, dopóki liczba nie będzie równa 0. Reszty z dzielenia spisane od tyłu dają wynik.
-  </p>
-  <video preload="metadata" controls>
-  Krótki filmik pokazujący zamianę liczby w systemie dziesiętnym na liczbę w systemie binarnym
-  <source src="decToBin.mp4" type="video/mp4">
-  </video>
-</div>
-
-<script>
-</script>
+  <header id="baner">
+    <h1>Przewodnik po systemach liczbowych dla techników informatyków</h1>
+  </header>
+  <nav id="menu">
+    <ul>
+      <span>Systemy liczbowe</span>
+      <hr>
+      <br>
+      <li>
+        <a href="">System dziesietny</a>
+      </li>
+      <li>
+        <a href="">System binarny</a>
+      </li>
+      <li>
+        <a href="">System ósemkowy</a>
+      </li>
+      <li>
+        <a href="">System Szesnastkowy</a>
+      </li>
+  <br>
+      <span>Zapis liczb ujemnych</span>
+      <hr>
+      <br>
+      <li>
+        <a href="">System ZM</a>
+      </li>
+      <li>
+        <a href="">System U1</a>
+      </li>
+      <li>
+        <a href="">System U2</a>
+      </li>
+      <br>
+      <span>Zapis liczb przecinkowych</span>
+      <hr>
+      <br>
+      <li>
+        <a href="">System FP</a>
+      </li>
+    </ul>
+  </nav>
+  <main id="content">
+  </main>
+  <footer id="stopka">
+  </footer>
 </body>
 </html>

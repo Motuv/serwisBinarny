@@ -256,5 +256,5 @@ function decToFP(number){
 
 //testy
 
-var liczba = prompt();
-alert(decToFP(liczba));
+//var liczba = prompt();
+//alert(decToFP(liczba));
