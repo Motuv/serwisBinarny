@@ -20,11 +20,17 @@
 	}
 	
 	#tableofcontents {
-	display: none
+	
 	}
 	
 	:target {
-	display: block
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background: orange
 	}
   </style>
 </head>
@@ -37,6 +43,7 @@
 
 <div id="decToBin" class="content">
   <h1>Zamiana liczby z systemu dziesiętnego na binarny</h1>
+  <span><a href="#"> Wróć</a></span>
   <hr />
   <p>
   Aby zamienić liczbę w systemie dziesiętnym na liczbę w systemie binarnym należy dzielić tą liczbę przez 2 i zapisywać resztę z jej dzielenia, dopóki liczba nie będzie równa 0. Reszty z dzielenia spisane od tyłu dają wynik.
@@ -48,7 +55,6 @@
 </div>
 
 <script>
-location.href = "#tableofcontents";
 </script>
 </body>
 </html>
