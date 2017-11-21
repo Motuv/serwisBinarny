@@ -254,6 +254,61 @@ function decToFP(number){
 		return units + "," + afterpoint;
 }
 
+function changeContent(content){
+	oldContent = document.getElementById("content");
+switch(content) {
+	case "binToOct":
+	oldContent.innerHTML = "Zamiana binarny na ósemkowy";
+	break;
+	
+	case "binToDec":
+	oldContent.innerHTML = "Zamiana binarny na dziesiętny";
+	break;
+	
+	case "binToHex":
+	oldContent.innerHTML = "Zamiana binarny na szesnastkowy";
+	break;
+	
+	case "octToBin":
+	oldContent.innerHTML = "Zamiana ósemkowy na binarny.";
+	break;
+	
+	case "octToDec":
+	oldContent.innerHTML = "Zamiana ósemkowy na dziesiętny.";
+	break;
+	
+	case "octToHex":
+	oldContent.innerHTML = "Zamiana ósemkowy na szesnastkowy.";
+	break;
+	
+	case "decToBin":
+	oldContent.innerHTML = "Zamiana dziesiętny na binarny.";
+	break;
+	
+	case "decToOct":
+	oldContent.innerHTML = "Zamiana dziesiętny na ósemkowy.";
+	break;
+	
+	case "decToHex":
+	oldContent.innerHTML = "Zamiana dziesiętny na szesnastkowy.";
+	break;
+	
+	case "hexToBin":
+	oldContent.innerHTML = "Zamiana szesnastkowy na binarny.";
+	break;
+	
+	case "hexToOct":
+	oldContent.innerHTML = "Zamiana szesnastkowy na ósemkowy.";
+	break;
+	
+	case "hexToDec":
+	oldContent.innerHTML = "Zamiana szesnastkowy na dziesiętny.";
+	break;
+	
+	
+}
+}
+
 //testy
 
 //var liczba = prompt();
