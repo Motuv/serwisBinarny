@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="500" style="border:1px solid #000000;"></canvas>
+<script>
+canvas = document.getElementById("myCanvas");
+context = canvas.getContext("2d");
+fadeness=0.0;
+
+function fadeText(){
+
+}
+
+function fadeLine(){
+console.log(fadeness);
+context.clearRect(0, 0, canvas.width, canvas.height);
+context.strokeStyle = "rgba(0,0,255," + fadeness + ")";
+context.lineWidth = 1;
+context.beginPath();
+context.moveTo(120,20);
+context.lineTo(120,400);
+context.stroke();
+}
+
+interval = setInterval(function(){fadeLine();if(fadeness>1){clearInterval(interval)};fadeness+=0.01},10);
+
+context.font = "50px Times New Roman";
+context.textAlign = "center";
+context.fillStyle = "blue";
+
+/*
+context.fillText("52", 75, 70);
+context.fillText("26", 75, 120);
+context.fillText("13", 75, 170);
+context.fillText("6", 75, 220);
+context.fillText("3", 75, 270);
+context.fillText("1", 75, 320);
+context.fillText("0", 75, 370);
+
+context.font = "30px Times New Roman";
+context.textAlign = "left";
+context.fillText("52 : 2 = 26 (reszty 0)", 300, 70);
+context.fillText("26 : 2 = 13 (reszty 0)", 300, 120);
+context.fillText("13 : 2 = 6 (reszty 1)", 300, 170);
+context.fillText("6 : 2 = 3 (reszty 0)", 300, 220);
+context.fillText("3 : 2 = 1 (reszty 1)", 300, 270);
+context.fillText("1 : 2 = 0 (reszty 1)", 300, 320);
+context.fillText("0", 300, 370);
+
+context.font = "50px Times New Roman";
+context.textAlign = "center";
+context.fillText("0", 170, 70);
+context.fillText("0", 170, 120);
+context.fillText("1", 170, 170);
+context.fillText("0", 170, 220);
+context.fillText("1", 170, 270);
+context.fillText("1", 170, 320);
+*/
+
+</script>
+</body>
+</html>
