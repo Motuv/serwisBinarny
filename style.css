@@ -1,6 +1,7 @@
 body{
   background-color: #548677;
-  font-family: 'Open Sans Condensed', sans-serif;
+
+font-family: 'Lato', sans-serif;
 }
 
 #baner{
@@ -11,7 +12,7 @@ body{
   background-color: #799F94;
   padding: 2.5%;
   font-weight: 700;
-  font-size: 125%;
+  font-size: 100%;
 }
 
 #menu{
@@ -22,7 +23,6 @@ body{
   border-radius: 10px;
   padding: 2.5%;
   padding-left: 0%;
-  font-size: 125%;
 }
 
 #content{
@@ -30,19 +30,22 @@ body{
   margin: 2.5%;
   background-color: #799F94;
   border-radius: 10px;
-  width: 62.5%;
+  width: 67.5%;
   padding: 2.5%;
+  font-size: 150%;
 }
 
 #stopka{
   clear: both;
   margin: 2.5%;
-  width: 90%;
+  width: 91%;
   height: 20%;
   border-radius: 10px;
   background-color: #799F94;
-  padding: 2.5%;
+  padding: 2%;
   font-weight: 700;
+  font-size: 150%;
+  text-align: center;
 }
 
 a{
@@ -56,4 +59,12 @@ ul{
 
 span{
   font-weight: 700;
+}
+
+li>ul{
+  display: none;
+}
+
+ul>li:hover>ul{
+  display: block;
 }

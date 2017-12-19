@@ -255,61 +255,257 @@ function decToFP(number){
 }
 
 function changeContent(content){
+
 	oldContent = document.getElementById("content");
-switch(content) {
-	case "binToOct":
-	oldContent.innerHTML = "Zamiana binarny na ósemkowy";
-	break;
-	
-	case "binToDec":
-	oldContent.innerHTML = "Zamiana binarny na dziesiętny";
-	break;
-	
-	case "binToHex":
-	oldContent.innerHTML = "Zamiana binarny na szesnastkowy";
-	break;
-	
-	case "octToBin":
-	oldContent.innerHTML = "Zamiana ósemkowy na binarny.";
-	break;
-	
-	case "octToDec":
-	oldContent.innerHTML = "Zamiana ósemkowy na dziesiętny.";
-	break;
-	
-	case "octToHex":
-	oldContent.innerHTML = "Zamiana ósemkowy na szesnastkowy.";
-	break;
-	
-	case "decToBin":
-	oldContent.innerHTML = "Zamiana dziesiętny na binarny.";
-	break;
-	
-	case "decToOct":
-	oldContent.innerHTML = "Zamiana dziesiętny na ósemkowy.";
-	break;
-	
-	case "decToHex":
-	oldContent.innerHTML = "Zamiana dziesiętny na szesnastkowy.";
-	break;
-	
-	case "hexToBin":
-	oldContent.innerHTML = "Zamiana szesnastkowy na binarny.";
-	break;
-	
-	case "hexToOct":
-	oldContent.innerHTML = "Zamiana szesnastkowy na ósemkowy.";
-	break;
-	
-	case "hexToDec":
-	oldContent.innerHTML = "Zamiana szesnastkowy na dziesiętny.";
-	break;
-	
-	
-}
+
+  switch(content) {
+
+  	case "binToOct":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "binToDec":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "binToHex":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "octToBin":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "octToDec":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "octToHex":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "decToBin":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "decToOct":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "decToHex":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "hexToBin":
+    oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "hexToOct":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+  	case "hexToDec":
+  	oldContent.innerHTML = examples(content);
+  	break;
+
+    case "zmToDec":
+  	oldContent.innerHTML = "Zamiana ZM na dziesiętny.";
+  	break;
+
+    case "decToZM":
+  	oldContent.innerHTML = "Zamiana dziesiętny na ZM.";
+  	break;
+
+    case "fpToDec":
+  	oldContent.innerHTML = "Zamiana FP na dziesiętny.";
+  	break;
+
+    case "decToFP":
+  	oldContent.innerHTML = "Zamiana dziesiętny na FP.";
+  	break;
+
+    case "uOneToDec":
+  	oldContent.innerHTML = "Zamiana U1 na dziesiętny.";
+  	break;
+
+    case "decToUOne":
+  	oldContent.innerHTML = "Zamiana dziesiętny na U1.";
+  	break;
+
+    case "uTwoToDec":
+  	oldContent.innerHTML = "Zamiana U2 na dziesiętny.";
+  	break;
+
+    case "decToUTwo":
+  	oldContent.innerHTML = "Zamiana dziesiętny na U2.";
+  	break;
+  }
 }
 
-//testy
+var wyniki = new Array(10);
 
-//var liczba = prompt();
-//alert(decToFP(liczba));
+function examples(content){
+    var tablica = new Array(10);
+    var tablica2 = new Array(10);
+    var tabelka = "<table>";
+
+    //losowanie przykładów
+    for(var i=0; i<10; i++){
+      tablica[i] = Math.floor(Math.random()*100);
+    }
+
+    //zamiana przykładów na to z czego mają być konwertowane
+    switch(content) {
+    	case "binToOct":
+    	case "binToDec":
+    	case "binToHex":
+        for(var i=0; i<10; i++){
+          tablica2[i] = decToBin(tablica[i]);
+        }
+        tabelka+="<h3>Binarny na ";
+      break;
+
+    	case "octToBin":
+    	case "octToDec":
+    	case "octToHex":
+      for(var i=0; i<10; i++){
+        tablica2[i] = decToOct(tablica[i]);
+      }
+      tabelka+="<h3>Ósemkowy na ";
+    	break;
+
+    	case "hexToBin":
+    	case "hexToOct":
+    	case "hexToDec":
+      for(var i=0; i<10; i++){
+        tablica2[i] = decToHex(tablica[i]);
+      }
+      tabelka+="<h3>Szesnastkowy na ";
+    	break;
+
+      case "decToBin":
+    	case "decToOct":
+    	case "decToHex":
+      for(var i=0; i<10; i++){
+        tablica2[i] = tablica[i];
+      }
+      tabelka+="<h3>Dziesiętny na ";
+    	break;
+  /*
+      case "zmToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToZM(tablica[i]);
+      }
+    	break;
+
+      case "fpToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToFP(tablica[i]);
+      }
+    	break;
+
+      case "uOneToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToUOne(tablica[i]);
+      }
+    	break;
+
+      case "uTwoToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToUTwo(tablica[i]);
+      }
+    	break;
+  */
+    }
+
+    //wyniki
+    switch(content) {
+    	case "binToOct":
+      case "hexToOct":
+      case "decToOct":
+
+        for(var i=0; i<10; i++){
+          wyniki[i] = decToOct(tablica[i]);
+        }
+        tabelka+="ósemkowy </h3>";
+      break;
+
+
+    	case "octToDec":
+      case "binToDec":
+      case "hexToDec":
+
+      for(var i=0; i<10; i++){
+        wyniki[i]=tablica[i];
+      }
+      tabelka+="dziesiętny </h3>";
+    	break;
+
+    	case "hexToBin":
+      case "octToBin":
+    	case "decToBin":
+
+      for(var i=0; i<10; i++){
+        wyniki[i] = decToBin(tablica[i]);
+      }
+      tabelka+="binarny </h3>";
+    	break;
+
+      case "binToHex":
+      case "octToHex":
+      case "decToHex":
+      for(var i=0; i<10; i++){
+        wyniki[i] = decToHex(tablica[i]);
+      }
+      tabelka+="szesnastkowy </h3>";
+      break;
+  /*
+      case "zmToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToZM(tablica[i]);
+      }
+    	break;
+
+      case "fpToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToFP(tablica[i]);
+      }
+    	break;
+
+      case "uOneToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToUOne(tablica[i]);
+      }
+    	break;
+
+      case "uTwoToDec":
+      for(var i=0; i<10; i++){
+        tablica[i] = decToUTwo(tablica[i]);
+      }
+    	break;
+    }
+    */
+    }
+
+
+    for(counter=0;counter<10;counter++){
+      tabelka+='<tr><td>' + tablica2[counter] + '</td><td>=</td><td><input type="number" id="odp'+counter+'"></td><td><button onclick="check('+counter+')">Sprawdź</button></td><td id="wynik'+counter+'"></td></tr>';
+    }
+    tabelka+="</table>";
+
+    return tabelka;
+
+}
+
+function check(counter){
+  var nazwa1 = "wynik"+counter;
+  var nazwa2 = "odp"+counter;
+  var poprawna = document.getElementById(nazwa1);
+  var odpowiedz = document.getElementById(nazwa2);
+
+  var odp = odpowiedz.value;
+  if(odp==wyniki[counter])
+    poprawna.innerHTML = "✔";
+  else
+    poprawna.innerHTML = "❌";
+}
