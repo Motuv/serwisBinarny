@@ -58,7 +58,7 @@ function binToHex(number){
         dec-=(dec%16);
         dec/=16;
       }
-	return tablica.join("");
+	return tablica.join("").toString();
 }
 
 function decToBin(dec) {
@@ -489,7 +489,7 @@ function examples(content){
 
 
     for(counter=0;counter<10;counter++){
-      tabelka+='<tr><td>' + tablica2[counter] + '</td><td>=</td><td><input type="number" id="odp'+counter+'"></td><td><button onclick="check('+counter+')">Sprawdź</button></td><td id="wynik'+counter+'"></td></tr>';
+      tabelka+='<tr><td>' + tablica2[counter] + '</td><td>=</td><td><input type="text" id="odp'+counter+'"></td><td><button onclick="check('+counter+')">Sprawdź</button></td><td id="wynik'+counter+'"></td></tr>';
     }
     tabelka+="</table>";
 
@@ -503,9 +503,10 @@ function check(counter){
   var poprawna = document.getElementById(nazwa1);
   var odpowiedz = document.getElementById(nazwa2);
 
-  var odp = odpowiedz.value;
+  var odp = (odpowiedz.value).toString();
   if(odp==wyniki[counter])
     poprawna.innerHTML = "✔";
   else
     poprawna.innerHTML = "❌";
+
 }
